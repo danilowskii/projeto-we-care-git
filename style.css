@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+header {
+  margin: 50px 0px;
+  display: flex;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: #525554;
+  font-size: 18px;
+}
+
+.shine-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.shine-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine-effect 3s infinite;
+}
+
+@keyframes shine-effect {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+a:hover {
+  color: #665ae1;
+}
+
+.menu-opcoes {
+  display: flex;
+  gap: 60px;
+  margin: 0 auto;
+}
+
+.botao-entrar {
+  position: absolute;
+  right: 5%;
+  top: 43px;
+  background: #665ae1;
+  border-radius: 50px;
+  padding: 7px 15px;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+
+  font-style: normal;
+  cursor: pointer;
+}
+
+.botao-entrar:hover {
+  background: #7d73f0;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  gap: 60px;
+  margin-top: 7%;
+}
+
+.conteudo-principal {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 60px;
+  color: #665ae1;
+  margin-bottom: -3%;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #665ae1;
+}
+
+p {
+  font-size: 20px;
+  color: #525554;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  line-height: 30px;
+}
+
+.botao-explorar {
+  border-radius: 20.5px;
+  border: none;
+  width: 200px;
+  font-size: 25px;
+  padding: 10px 1px;
+  background: #665ae1;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 300ms;
+  box-shadow: 3px 8px 8px #d1d0d4;
+}
+
+.botao-explorar:hover {
+  transform: scale(1.05);
+  background-color: #7d73f0;
+}
